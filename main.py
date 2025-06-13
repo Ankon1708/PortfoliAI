@@ -25,6 +25,11 @@ vector_db=FAISS.load_local("faiss_vector_db",embeddings,allow_dangerous_deserial
 import streamlit as st
 
 st.title("PortfoliAI")
+github_url = "https://github.com/Ankon1708"
+linkedin_url = "https://www.linkedin.com/in/ankon-bhowmick-2a8805193/"
+st.markdown(f"[![GitHub](https://img.shields.io/badge/GitHub-Profile-blue?logo=github)]({github_url})")
+st.markdown(f"[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)]({linkedin_url})")
+
 st.sidebar.title("I am Ankon Bhowmick, an aspiring data scientist.\n This is an RAG-based chat bot that demonstrates my new-found skills in Generative AI.\n This bot is capable of answering questions about my academic journey, internship experience, and my entire portfolio of projects and skills.\n Feel free to ask any question pertaining to them.")
 
 main_placeholder = st.empty()
