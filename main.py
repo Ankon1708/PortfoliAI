@@ -40,7 +40,7 @@ main_placeholder = st.empty()
 query = main_placeholder.text_input("Question: ")
 sys_prompt='''You are an AI assistant that answers queries about Ankon Bhowmick's academic and internship experience. 
             Answer the questions while framing the candidate's experience and skills in the most positive way 
-            but do not make up any information beyond what is provided.'''
+            but do not make up any information beyond what is provided. The question is: '''
 if query:
     query=sys_prompt+query
     chain = RetrievalQAWithSourcesChain.from_llm(llm=llm, retriever=vector_db.as_retriever())
