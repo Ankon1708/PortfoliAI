@@ -42,28 +42,10 @@ sys_prompt='''You are an AI assistant that answers queries about Ankon Bhowmick'
             Answer the questions while framing the candidate's experience and skills in the most positive way 
             but do not make up any information beyond what is provided.'''
 if query:
-    progress_bar = st.progress(0)
-    status = st.empty()
-    
     query=sys_prompt+query
     chain = RetrievalQAWithSourcesChain.from_llm(llm=llm, retriever=vector_db.as_retriever())
-
-    status.text("🔍 Step 1: Retrieving relevant documents...")
-    for i in range(10):
-        time.sleep(0.05)
-        progress_bar.progress(i + 1)
         
     result=chain({"question": query}, return_only_outputs=True)
-
-    status.text("🧩 Step 2: Mapping documents and extracting information...")
-    for i in range(10, 40):
-        time.sleep(0.05)
-        progress_bar.progress(i + 1)
-
-    status.text("📝 Step 3: Generating final answer using LLM...")
-    for i in range(40, 100):
-        time.sleep(0.02)
-        progress_bar.progress(i + 1)
         
     st.header("Answer")
     st.write(result["answer"])
