@@ -7,8 +7,8 @@ Created on Fri Jun 13 01:03:35 2025
 import os
 os.chdir('C:\\Users\\ASUS\\Documents\\Python Scripts\\LnE Langchain')
 """
-from Keys import my_google_api_key
-import os
+from dotenv import load_dotenv
+load_dotenv()  
 os.environ["GOOGLE_API_KEY"] = my_google_api_key
 
 from langchain_google_genai import ChatGoogleGenerativeAI
