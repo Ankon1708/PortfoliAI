@@ -1,12 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jun 13 01:03:35 2025
-
-@author: ASUS
-
-import os
-os.chdir('C:\\Users\\ASUS\\Documents\\Python Scripts\\LnE Langchain')
-"""
 from Keys import my_google_api_key
 os.environ["GOOGLE_API_KEY"] = my_google_api_key
 
