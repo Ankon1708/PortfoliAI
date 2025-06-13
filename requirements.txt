@@ -5,3 +5,4 @@ unstructured
 tiktoken
 faiss-cpu
 langchain-google-genai
+langchain-community
