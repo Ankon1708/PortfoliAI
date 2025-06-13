@@ -1,4 +1,5 @@
 from Keys import my_google_api_key
+import os
 os.environ["GOOGLE_API_KEY"] = my_google_api_key
 
 from langchain_google_genai import ChatGoogleGenerativeAI
