@@ -50,7 +50,6 @@ system_prompt = SystemMessagePromptTemplate.from_template(
 
 prompt_rag_human = HumanMessagePromptTemplate.from_template(
     """You are tasked with drafting an answer for a question asked regarding a candidate's skills and experience.
-
 The answer should only contain information on the candidate in the form of context that has been made available to you, do not falsify any skills or experience. 
 For behavourial questions, use slightly creative vocabulary to best answer them.
 The context is: {context}
@@ -72,7 +71,7 @@ prompt_genq = ChatPromptTemplate.from_messages([system_prompt, prompt_genq_human
 
 prompt_final_human=HumanMessagePromptTemplate.from_template('''
 You are given information about the candidate that is relevant to the question. Here's the information : {context}
-Answer this question about the candidate by coherently restructuring the information while trying to reduce redundancy : {question}''')
+Answer this question about the candidate by coherently using the information while trying to reduce redundancy. Remember that this question is asked by someone else about the candidate : {question}''')
 
 prompt_final=ChatPromptTemplate.from_messages([system_prompt, prompt_final_human])
 
