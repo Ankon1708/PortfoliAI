@@ -1,1 +1,2 @@
 my_google_api_key="AIzaSyCqM1e2IgNM8Poa0x0rCfX19deMyiKisaY"
+my_lang_api_key="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"
