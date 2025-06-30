@@ -7,3 +7,4 @@ faiss-cpu
 langchain-google-genai
 langchain-community
 langchain-core
+IPython
