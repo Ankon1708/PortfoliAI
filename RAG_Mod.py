@@ -37,7 +37,7 @@ llm = ChatGoogleGenerativeAI(
     # other params...
 )
 
-embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
+embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
 
 vector_db=FAISS.load_local("faiss_vector_db",embeddings,allow_dangerous_deserialization=True)
 
