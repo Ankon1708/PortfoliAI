@@ -7,13 +7,12 @@ Created on Mon Jun 30 20:26:24 2025
 
 #%% Import API Keys, libraries, set environment for LangSmith
 
-from Keys import my_lang_api_key, my_google_api_key
 import os
-os.environ["GOOGLE_API_KEY"] = my_google_api_key
+os.environ["GOOGLE_API_KEY"] = st.secrets["my_google_api_key"]
 os.environ['LANGCHAIN_TRACING_V2'] = 'true'
 os.environ['LANGCHAIN_ENDPOINT'] = 'https://api.smith.langchain.com'
 os.environ['LANGSMITH_PROJECT']="PortfoliAI_v1"
-os.environ['LANGCHAIN_API_KEY'] = my_lang_api_key
+os.environ['LANGCHAIN_API_KEY'] = st.secrets["my_lang_api_key"]
 
 import langchain
 from langchain_google_genai import ChatGoogleGenerativeAI
