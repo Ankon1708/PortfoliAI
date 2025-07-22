@@ -25,6 +25,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate, ChatPromptTemplate
 from IPython.display import Markdown
 
+import nest_asyncio
+nest_asyncio.apply()
 
 #%% Initialise LLM and embeddings, import VDB
 
