@@ -7,6 +7,7 @@ Created on Mon Jun 30 20:26:24 2025
 
 #%% Import API Keys, libraries, set environment for LangSmith
 
+import streamlit as st
 import os
 os.environ["GOOGLE_API_KEY"] = st.secrets["my_google_api_key"]
 os.environ['LANGCHAIN_TRACING_V2'] = 'true'
