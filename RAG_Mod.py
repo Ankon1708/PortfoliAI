@@ -22,7 +22,7 @@ from langchain_google_genai.embeddings import GoogleGenerativeAIEmbeddings
 from langchain_core.runnables.base import RunnableEach
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
-from langchain.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate, ChatPromptTemplate
+from langchain_core.prompts.chat import SystemMessagePromptTemplate, HumanMessagePromptTemplate, ChatPromptTemplate
 from IPython.display import Markdown
 
 import nest_asyncio
@@ -121,5 +121,6 @@ CC_RAG=(
 
 def My_Chatbot(query):
     return CC_RAG.invoke(query)
+
 
 
