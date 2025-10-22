@@ -17,7 +17,7 @@ os.environ['LANGCHAIN_API_KEY'] = st.secrets["my_lang_api_key"]
 
 import langchain
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_core.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain_google_genai.embeddings import GoogleGenerativeAIEmbeddings
 from langchain_core.runnables.base import RunnableEach
 from langchain_core.runnables import RunnablePassthrough
@@ -121,4 +121,5 @@ CC_RAG=(
 
 def My_Chatbot(query):
     return CC_RAG.invoke(query)
+
 
