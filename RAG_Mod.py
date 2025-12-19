@@ -32,7 +32,7 @@ nest_asyncio.apply()
 
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
-    temperature=0.5,
+    temperature=0.8,
     max_tokens=None,
     timeout=None,
     max_retries=2,
@@ -62,7 +62,7 @@ The question is: {question}""",
 prompt_rag = ChatPromptTemplate.from_messages([system_prompt, prompt_rag_human])
 
 prompt_genq_human = HumanMessagePromptTemplate.from_template(
-    """You are an AI language model assistant. Your task is to generate five 
+    """You are an AI language model assistant. Your task is to generate three 
 different versions of the given user question to retrieve relevant documents from a vector 
 database. By generating multiple perspectives on the user question, your goal is to help
 the user overcome some of the limitations of the distance-based similarity search. 
@@ -121,6 +121,7 @@ CC_RAG=(
 
 def My_Chatbot(query):
     return CC_RAG.invoke(query)
+
 
 
 
